@@ -38,13 +38,13 @@ const BuildingDirectory = () => {
         </InputGroup>
         <VStack spacing={4} align="stretch">
           {buildings.map((building, index) => (
-            <HStack key={index} spacing={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
+            <HStack key={index} spacing={4} p={4} borderWidth="1px" borderRadius="md" bg="white" boxShadow="sm">
               <Image boxSize="50px" src={building.imageUrl} alt={building.name} />
               <Box flex="1">
                 <Text fontWeight="bold">{building.name}</Text>
                 <Text>{building.address}</Text>
               </Box>
-              <Button colorScheme="gray">View</Button>
+              <Button colorScheme="gray" variant="outline">View</Button>
             </HStack>
           ))}
         </VStack>
