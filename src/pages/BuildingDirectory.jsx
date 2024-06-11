@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Box, Container, Heading, Input, InputGroup, InputLeftElement, VStack, HStack, Text, Button, Image, Flex, Spacer } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 
 const buildings = [
-  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
+  { id: 1, name: 'Building Name 1', address: 'Address 1', imageUrl: 'https://via.placeholder.com/50' },
+  { id: 2, name: 'Building Name 2', address: 'Address 2', imageUrl: 'https://via.placeholder.com/50' },
+  // Add more buildings as needed
 ];
 
 const BuildingDirectory = () => {
@@ -57,7 +55,7 @@ const BuildingDirectory = () => {
                 <Text fontWeight="bold">{building.name}</Text>
                 <Text>{building.address}</Text>
               </Box>
-              <Button colorScheme="gray" variant="outline">View</Button>
+              <Button as={Link} to={`/building/${building.id}`} colorScheme="gray" variant="outline">View</Button>
             </HStack>
           ))}
         </VStack>
