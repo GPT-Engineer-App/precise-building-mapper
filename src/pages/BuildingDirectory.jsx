@@ -3,12 +3,12 @@ import { Box, Container, Heading, Input, InputGroup, InputLeftElement, VStack, H
 import { SearchIcon } from '@chakra-ui/icons';
 
 const buildings = [
-  { name: 'Empire State Building', address: '350 5th Ave, New York, NY 10118', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Willis Tower', address: '233 S Wacker Dr, Chicago, IL 60606', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Burj Khalifa', address: '1 Sheikh Mohammed bin Rashid Blvd, Dubai, UAE', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Eiffel Tower', address: 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'Shanghai Tower', address: '501 Yincheng Middle Rd, Lujiazui, Pudong, Shanghai, China', imageUrl: 'https://via.placeholder.com/50' },
-  { name: 'One World Trade Center', address: '285 Fulton St, New York, NY 10007', imageUrl: 'https://via.placeholder.com/50' },
+  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
+  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
+  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
+  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
+  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
+  { name: 'Building Name', address: 'Address', imageUrl: 'https://via.placeholder.com/50' },
 ];
 
 const BuildingDirectory = () => {
@@ -46,6 +46,7 @@ const BuildingDirectory = () => {
             placeholder="Search by name, address or city..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            bg="gray.100"
           />
         </InputGroup>
         <VStack spacing={4} align="stretch">
