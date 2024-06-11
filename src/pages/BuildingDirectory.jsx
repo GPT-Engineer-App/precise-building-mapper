@@ -21,7 +21,7 @@ const BuildingDirectory = () => {
 
   return (
     <Box>
-      <Flex as="nav" bg="white" p={4} boxShadow="sm">
+      <Flex as="nav" bg="white" p={4} boxShadow="sm" alignItems="center">
         <Box fontWeight="bold" fontSize="xl">RealEstate</Box>
         <Spacer />
         <HStack spacing={8}>
